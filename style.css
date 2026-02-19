@@ -138,11 +138,6 @@ section {
     box-shadow: 0 20px 30px -10px rgba(59,130,246,0.3);
     border: 3px solid #2a2e3a;
 }
-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
 
 .avatar i {
     font-size: 7rem;
@@ -288,6 +283,141 @@ img {
     margin-right: 4px;
 }
 
+/* Project Gallery Carousel - FIXED to show full images */
+#project-carousel {
+    padding-top: 0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+    border: 1px solid #2a2e3a;
+    background: #151a24;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 450px;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0f1320; /* Dark background for letterboxing */
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Changed from 'cover' to 'contain' to show full image */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide:hover img {
+    transform: scale(1.02); /* Reduced scale to keep image in view */
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.5rem 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    text-align: left;
+}
+
+.slide-caption h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #f0f4fa;
+}
+
+.slide-caption p {
+    font-size: 1rem;
+    color: #9ca3af;
+    margin: 0;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(26, 30, 42, 0.8);
+    border: 2px solid #3b82f6;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+.carousel-btn:hover {
+    background: #3b82f6;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* Carousel Indicators (dots) */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.indicator.active {
+    background: #3b82f6;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #3b82f6;
+}
+
+.indicator:hover {
+    background: #3b82f6;
+}
 
 /* background / interests */
 .bio-card {
@@ -330,6 +460,87 @@ img {
 .interest-list i {
     color: #3b82f6;
     width: 24px;
+}
+
+/* CV Download Section */
+.cv-download-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #2a2e3a;
+    text-align: center;
+}
+
+.cv-download-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #f0f4fa;
+}
+
+.cv-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+.cv-btn-primary {
+    background: #3b82f6;
+    color: white;
+    box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+}
+
+.cv-btn-primary:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(59,130,246,0.4);
+}
+
+.cv-btn-outline {
+    background: transparent;
+    color: #e5e9f0;
+    border: 2px solid #3b82f6;
+}
+
+.cv-btn-outline:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.cv-note {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+/* Contact link styles (clickable email/phone) */
+.contact-link {
+    color: #e5e9f0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: #3b82f6;
+    text-decoration: underline;
 }
 
 /* contact form */
@@ -390,6 +601,29 @@ img {
 }
 .social-links a:hover {
     color: #3b82f6;
+}
+
+/* Contact CV button */
+.contact-cv {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #2a2e3a;
+}
+
+.contact-cv .btn {
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: 2px solid #3b82f6;
+    color: #e5e9f0;
+    box-shadow: none;
+    margin-top: 0;
+}
+
+.contact-cv .btn:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
 }
 
 .form {
@@ -483,6 +717,52 @@ img {
     }
     .section-title {
         font-size: 1.9rem;
+    }
+    
+    .cv-options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .cv-btn {
+        justify-content: center;
+    }
+
+    .carousel-slides {
+        height: 300px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .slide-caption h3 {
+        font-size: 1.2rem;
+    }
+    
+    .slide-caption p {
+        font-size: 0.9rem;
+    }
+    
+    .prev-btn {
+        left: 10px;
+    }
+    
+    .next-btn {
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slides {
+        height: 250px;
+    }
+    
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
     }
 }
 
