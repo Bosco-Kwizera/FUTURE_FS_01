@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen · portfolio</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="logo">K_B</span>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">Background</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO & introduction (home) -->
+        <section id="home" class="hero container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Kwizera Bosco<br>building digital experiences</h1>
+                    <p>Front-end developer & creative problem solver. I turn ideas into clean, responsive interfaces.</p>
+                    <a href="#contact" class="btn"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i>Get in touch</a>
+                </div>
+                <div class="hero-image">
+                    <div class="avatar">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS & TECH STACK - UPDATED with your specified skills -->
+        <section id="skills" class="container">
+            <h2 class="section-title">⚙️ skills & tech stack</h2>
+            <div class="skills-grid">
+                <span class="skill-chip"><i class="fab fa-html5"></i> HTML5</span>
+                <span class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span class="skill-chip"><i class="fab fa-js"></i> JavaScript</span>
+                <span class="skill-chip"><i class="fab fa-python"></i> Django</span>
+                <span class="skill-chip"><i class="fas fa-database"></i> Database Programming</span>
+                <span class="skill-chip"><i class="fab fa-node-js"></i> Node.js</span>
+            </div>
+        </section>
+
+        <!-- PROJECTS (including Future Interns tasks) -->
+        <section id="projects" class="container">
+            <h2 class="section-title">🚀 projects (incl. Future Interns tasks)</h2>
+            <div class="projects-grid">
+                <!-- task 1: Future Interns landing -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Internship landing page</h3>
+                    <p>Future Interns task – responsive hero section with call-to-action, built with flexbox and smooth scroll.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> code</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> demo</a>
+                    </div>
+                </div>
+                <!-- task 2: interactive card -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-id-card"></i></div>
+                    <h3>Team bio cards</h3>
+                    <p>Future Interns task – interactive profile cards with hover effects, dark/light toggle (JS).</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> code</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> demo</a>
+                    </div>
+                </div>
+                <!-- personal project: devfinder -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-search"></i></div>
+                    <h3>devfinder app</h3>
+                    <p>GitHub user search with API integration. Displays avatar, repos, and stats — fully responsive.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">API</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> code</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> demo</a>
+                    </div>
+                </div>
+                <!-- task 3: future interns to-do -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-check-double"></i></div>
+                    <h3>taskFlow (to-do)</h3>
+                    <p>Future Interns challenge – a minimalist to-do with localStorage, categories and dark theme.</p>
+                    <div class="project-tags">
+                        <span class="tag">JS</span>
+                        <span class="tag">localStorage</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> code</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BACKGROUND, INTERESTS, GOALS -->
+        <section id="about" class="container">
+            <h2 class="section-title">🧑‍💻 background & interests</h2>
+            <div class="bio-card">
+                <div class="bio-grid">
+                    <div class="bio-col">
+                        <h3><i class="fas fa-user-graduate" style="color:#3b82f6;"></i> background</h3>
+                        <p style="margin-bottom:1rem;">CS graduate from University of Washington, with a minor in design. Previously interned at Stackware where I built dashboards and component libraries. I love crafting interfaces that are both accessible and performant.</p>
+                        <p>Currently leveling up through the <strong>Future Interns program</strong> — building real-world projects and collaborating with mentors.</p>
+                    </div>
+                    <div class="bio-col">
+                        <h3><i class="fas fa-heart" style="color:#3b82f6;"></i> interests</h3>
+                        <ul class="interest-list">
+                            <li><i class="fas fa-camera"></i> street photography & composition</li>
+                            <li><i class="fas fa-robot"></i> AI / machine learning experiments</li>
+                            <li><i class="fas fa-hiking"></i> hiking & finding hidden waterfalls</li>
+                            <li><i class="fas fa-book-open"></i> sci‑fi & speculative design</li>
+                        </ul>
+                    </div>
+                    <div class="bio-col">
+                        <h3><i class="fas fa-bullseye" style="color:#3b82f6;"></i> goals</h3>
+                        <ul class="interest-list">
+                            <li><i class="fas fa-check-circle"></i> master full‑stack with Node.js</li>
+                            <li><i class="fas fa-check-circle"></i> contribute to open‑source design systems</li>
+                            <li><i class="fas fa-check-circle"></i> speak at a local tech meetup</li>
+                            <li><i class="fas fa-check-circle"></i> land a front‑end role where I can mentor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="container">
+            <h2 class="section-title">📬 contact me</h2>
+            <div class="contact-container">
+                <div class="contact-flex">
+                    <div class="contact-info">
+                        <h3>Let's connect</h3>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>alex.chen@futureinterns.dev</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Seattle, WA (remote ok)</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+1 (206) 555-0912</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Codepen"><i class="fab fa-codepen"></i></a>
+                        </div>
+                    </div>
+                    <form class="form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your name" required id="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email address" required id="email">
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" placeholder="Tell me about your project or opportunity..." required id="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i>Send message</button>
+                        <p id="formFeedback" style="margin-top:1rem; font-size:0.9rem; color:#3b82f6;"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Alex Chen – built with HTML, CSS, JavaScript · <i class="fas fa-heart" style="color:#3b82f6;"></i> dark theme</p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
