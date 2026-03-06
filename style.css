@@ -139,6 +139,26 @@ section {
     border: 3px solid #2a2e3a;
 }
 
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the circle without distortion */
+    border-radius: 50%; /* Makes the image circular */
+    display: block;
+}
+
+/* If you want a border effect around the image */
+.avatar {
+    position: relative;
+    overflow: hidden; /* Ensures image stays within circle */
+}
+
+/* Optional: Add a subtle hover effect */
+.avatar:hover .profile-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 .avatar i {
     font-size: 7rem;
     color: #3b82f6;
